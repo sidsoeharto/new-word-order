@@ -21,7 +21,7 @@ function Register() {
           <form className="w-full">
             <div className="md:flex md:items-center mb-6">
               <div className="md:w-1/3">
-                <label className="block text-white font-semibold text-left md:text-right text-xl mb-3 md:mb-0 pr-4" for="inline-full-name">
+                <label className="block text-white font-semibold text-left text-xl mb-3 md:mb-0" for="inline-full-name">
                   Your Name
                 </label>
               </div>
@@ -31,7 +31,7 @@ function Register() {
             </div>
             <div className="md:flex md:items-center mb-6">
               <div className="md:w-1/3">
-                <label className="block text-white font-semibold text-left md:text-right text-xl mb-3 md:mb-0 pr-4" for="inline-full-name">
+                <label className="block text-white font-semibold text-left text-xl mb-3 md:mb-0" for="inline-full-name">
                   Email Address
                 </label>
               </div>
@@ -41,7 +41,7 @@ function Register() {
             </div>
             <div className="md:flex md:items-center mb-6">
               <div className="md:w-1/3">
-                <label className="block text-white font-semibold text-left md:text-right text-xl mb-3 md:mb-0 pr-4" for="inline-full-name">
+                <label className="block text-white font-semibold text-left text-xl mb-3 md:mb-0" for="inline-full-name">
                   I am ..
                 </label>
               </div>

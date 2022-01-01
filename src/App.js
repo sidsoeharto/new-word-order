@@ -8,6 +8,8 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import Register from './components/Register';
 
+import React from 'react';
+
 function App() {
   return (
     <div className="App">

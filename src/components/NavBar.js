@@ -1,5 +1,13 @@
+import React from 'react';
 
 function NavBar() {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const [height, setHeight] = React.useState(window.innerHeight);
+  const handleWindowResize = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+  
   return (
     <nav className="bg-white drop-shadow-lg sticky top-0">
       <div className="max-w-10xl mx-auto px-2 sm:px-6 lg:px-8">
