@@ -1,3 +1,5 @@
+@import url('./stylesheet.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,11 +8,3 @@
   font-family: 'Lato';
   src: local('Lato'), url(/public/assets/fonts/Guthen.ttf) format('ttf');
 } */
-@font-face {
-  font-family: 'Guthen Bloots Basic';
-  src: local('Manrope'), url(/public/assets/fonts/Guthen.ttf) format('ttf');
-}
-@font-face {
-  font-family: 'Meta';
-  src: local('Meta'), url(/public/assets/fonts/Meta.ttf) format('ttf');
-}

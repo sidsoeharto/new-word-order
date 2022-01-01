@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AccordionItem from './AccordionItem';
 
-function FAQ () {
+function FAQ ({font}) {
   const accordionData = [
     {
       title: 'Who is eligile to apply for this program?',
@@ -60,7 +60,7 @@ function FAQ () {
       }}
     >
       <div className="flex justify-center text-center p-2">
-        <h1 className="text-5xl text-white font-bold mb-2">FAQs</h1>
+        <h1 className={`${font === 'font-guthen' ? 'text-5xl lg:text-6xl' : 'text-4xl lg:text-5xl font-bold'} text-white mb-2 ${font}`}>FAQs</h1>
       </div>
       <div className="flex justify-center text-center p-4">
         <div className="accordion w-full" id="accordionExample">

@@ -1,11 +1,11 @@
-function Hero() {
+function Hero({font}) {
   return (
     <section className="flex flex-col lg:flex-row container-fluid min-h-max text-center" style={{background: '#111'}}>
       <div className="flex-initial">
-        <img src="/assets/for-2032.png" alt="You for 2032" className="px-32 lg:pl-64 mx-auto mb-8"></img>
+        <img src="/assets/for-2032.png" alt="You for 2032" className="h-80 lg:h-auto px-32 lg:pl-64 mx-auto mb-16"></img>
       </div>
-      <div className="md:flex lg:flex-1 flex-col lg:w-9/12 sm:w-full lg:px-48 lg:py-48 mx-auto justify-center">
-        <h1 className="text-4xl lg:text-5xl font-bold mb-6 lg:mb-16 text-white" style={{fontFamily: 'Guthen Bloots Basic'}}>2032 is <u>made for you!</u></h1>
+      <div className="md:flex lg:flex-1 flex-col lg:w-9/12 sm:w-full px-4 lg:px-48 lg:py-48 mx-auto justify-center">
+        <h1 className={`${font === 'font-guthen' ? 'text-6xl lg:text-8xl' : 'text-4xl lg:text-7xl font-bold'} mb-6 lg:mb-16 text-white ${font}`}>2032 is <u>made for you!</u></h1>
 
         <div className="mb-12">
           <h3 className="text-white text-center text-2xl lg:text-3xl lg:mb-3 font-bold">On your marks! Get set! Wait for it …</h3> 

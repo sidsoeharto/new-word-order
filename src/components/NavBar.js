@@ -1,12 +1,14 @@
 import React from 'react';
 
 function NavBar() {
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const [height, setHeight] = React.useState(window.innerHeight);
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
+  // const [width, setWidth] = React.useState(window.innerWidth);
+  // const [height, setHeight] = React.useState(window.innerHeight);
+  // const handleWindowResize = () => {
+  //   setWidth(window.innerWidth);
+  //   setHeight(window.innerHeight);
+  // };
+
+  
   
   return (
     <nav className="bg-white drop-shadow-lg sticky top-0">
@@ -27,7 +29,7 @@ function NavBar() {
 
             <div className="ml-4 relative hidden lg:block">
               <div>
-                <button type="button" className="flex text-sm rounded-full" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <button type="button" className="flex text-sm rounded-full" id="user-menu-button" aria-expanded="false" aria-haspopup="true" onClick={() => {window.open(window.location.href, "", "width=480, height=811")}}>
                   <img className="h-8 w-8" src="/assets/phone-laptop.svg" alt="" />
                 </button>
               </div>

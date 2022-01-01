@@ -7,9 +7,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        'sans': ['Lato', 'Helvetica', 'Arial', 'sans-serif'],
         'Lato': ['Lato', 'sans-serif'],
-        'Guthen': ['"Guthen Bloots Basic"', 'serif'], // Ensure fonts with spaces have " " surrounding it.
-        'Meta': ['"Meta"', 'serif']
+        'guthen': ['Guthen Bloots Personal Use', 'scipt'], // Ensure fonts with spaces have " " surrounding it.
+        'meta': ['Meta Pro Book', 'sans-serif']
       },
     },
   },

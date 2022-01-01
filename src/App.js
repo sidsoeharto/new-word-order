@@ -11,15 +11,17 @@ import Register from './components/Register';
 import React from 'react';
 
 function App() {
+  const [state, setState] = React.useState('desktop');
+  const [font, setFont] = React.useState('font-guthen');
   return (
-    <div className="App">
+    <div className={`App ${state}`}>
       <NavBar />
-      <Hero />
-      <About />
-      <Register />
-      <Snapshot />
-      <FAQ />
-      <Footer />
+      <Hero font={font}/>
+      <About font={font} />
+      <Register font={font}/>
+      <Snapshot font={font}/>
+      <FAQ font={font}/>
+      <Footer font={font}/>
     </div>
   );
 }
