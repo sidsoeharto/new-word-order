@@ -7,19 +7,27 @@ import Snapshot from './components/Snapshot';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import Register from './components/Register';
+import Testing from './components/Testing';
 
-import React from 'react';
+import React, {forwardRef, useRef} from 'react';
 
 function App() {
+  const registerRef = useRef()
+
+  function handleBackClick() {
+    registerRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const [state, setState] = React.useState('desktop');
-  const [font, setFont] = React.useState('font-guthen');
+  const [font, setFont] = React.useState('font-meta');
   return (
     <div className={`App ${state}`}>
-      <NavBar />
-      <Hero font={font}/>
+      <NavBar onBackClick={handleBackClick}/>
+      <Hero font={font} onBackClick={handleBackClick}/>
       <About font={font} />
-      <Register font={font}/>
+      <Register font={font} ref={registerRef}/>
       <Snapshot font={font}/>
+      <Testing font={font} onBackClick={handleBackClick}/>
       <FAQ font={font}/>
       <Footer font={font}/>
     </div>

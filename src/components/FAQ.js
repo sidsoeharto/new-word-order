@@ -53,20 +53,26 @@ function FAQ ({font}) {
 
   return (
     <section 
-      className="flex flex-col container-fluid min-h-max py-12 lg:py-48 lg:px-64 text-center"
+      className="flex flex-col container-fluid min-h-max py-12 lg:px-24 xl:py-24 xl:px-64 text-center"
       style={{
         background: 'url("/assets/faq-bg.png"), rgba(240, 83, 77, 0.9)', 
         backgroundSize: 'cover'
       }}
     >
       <div className="flex justify-center text-center p-2">
-        <h1 className={`${font === 'font-guthen' ? 'text-5xl lg:text-6xl' : 'text-4xl lg:text-5xl font-bold'} text-white mb-2 ${font}`}>FAQs</h1>
+        <h1 className={`${font === 'font-guthen' ? 'text-5xl xl:text-6xl' : 'text-4xl xl:text-5xl font-bold'} text-white mb-2 ${font}`}>FAQs</h1>
       </div>
-      <div className="flex justify-center text-center p-4">
-        <div className="accordion w-full" id="accordionExample">
+      <div className="flex flex-col justify-center text-center p-4">
+        <div className="accordion w-full mb-5" id="accordionExample">
           {accordionData.map(({ title, content }, index) => (
             <AccordionItem key={index} title={title} content={content} />
           ))}
+        </div>
+        <div className='w-full px-12'>
+          <h1 className='text-left text-xl text-white font-normal'>
+            <span className='font-bold'>Questions?</span><br />
+            Contact the Queensland Academy of Sport via email <a href="mailto:Youfor2032@dtis.qld.gov.au" className="underline underline-offset-1" style={{textDecoration: 'underline'}}>Youfor2032@dtis.qld.gov.au</a>
+          </h1>
         </div>
       </div>
     </section> 

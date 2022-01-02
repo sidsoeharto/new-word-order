@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 
-function NavBar() {
+const NavBar = forwardRef(({onBackClick}) => {
   // const [width, setWidth] = React.useState(window.innerWidth);
   // const [height, setHeight] = React.useState(window.innerHeight);
   // const handleWindowResize = () => {
@@ -11,7 +11,7 @@ function NavBar() {
   
   
   return (
-    <nav className="bg-white drop-shadow-lg sticky top-0">
+    <nav className="bg-white drop-shadow-lg sticky top-0" style={{zIndex: 100}}>
       <div className="max-w-10xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-1 flex items-center justify-start px-4 lg:px-40 items-stretch">
@@ -22,7 +22,7 @@ function NavBar() {
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <div className="lg:mr-4 relative">
-              <button type="button" className="bg-white border border-2 border-black rounded font-semibold py-2 px-3 text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-gray-800">
+              <button onClick={onBackClick} className="bg-white border border-2 border-black rounded font-semibold py-2 px-3 text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-gray-800">
                 <span>Register Now</span>
               </button>
             </div>
@@ -39,6 +39,6 @@ function NavBar() {
       </div>
     </nav>
   );
-}
+})
 
 export default NavBar;
